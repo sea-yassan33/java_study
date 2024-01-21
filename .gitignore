@@ -1,5 +1,7 @@
 /build/
-.metadata/*
-.settings/*
+/.metadata/*
+/.settings/*
+/Servers/*
+/src/main/webapp/WEB-INF/lib/*
 /src/properties/*
 /src/main/java/config/FileLocatio.java
