@@ -7,23 +7,10 @@
 <!-- bootstrap -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.min.css" integrity="sha384-fFxL8wXRpg9gVqGpY+URMtLr3fLL0WBbo4NBQ+IWwMDYjIjI5VQ46XlJm5+BUlXJ" crossorigin="anonymous">
-<title>Insert title here</title>
+<title>顧客一覧画面</title>
 </head>
 <body>
-	<div class="mx-auto" style="width: 300px;">
-		<h1 class="mb-3" style="text-align: center">管理者ログイン画面</h1>
-		<form action="/SampleEnv/LoginServlet" method="post">
-		  <div class="mb-3">
-		    <label for="adminID" class="form-label">管理者ID-test</label>
-		    <input type="text" class="form-control" id="adminID" name="admin_id">
-		  </div>
-		  <div class="mb-3">
-		    <label for="pass" class="form-label">パスワード</label>
-		    <input type="password" class="form-control" id="pass" name="password">
-		  </div>
-		  <button type="submit" class="btn btn-primary">ログイン</button>
-		</form>
-	</div>
+	<h1>ログイン成功</h1>
 	
 	<!-- jQuery読み込み -->
 	<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>

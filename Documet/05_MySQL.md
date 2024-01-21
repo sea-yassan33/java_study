@@ -4,6 +4,11 @@
 - MySQL var8.0をインストールしているので「MySQL80」
 - サービスの、開始ボタンをクリック
 
+- 再接続（mac）
+```
+sudo mysql.server restart
+```
+
 ## コマンド
 [MySQL基本コマンド一覧まとめ](https://qiita.com/yuzooho/items/5d608f3b84a2037cada0)
 

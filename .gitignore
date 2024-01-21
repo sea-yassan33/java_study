@@ -1,1 +1,5 @@
 /build/
+.metadata/*
+.settings/*
+/src/properties/*
+/src/main/java/config/FileLocatio.java

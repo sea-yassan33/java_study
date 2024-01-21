@@ -31,3 +31,10 @@ http://localhost:8080/SampleEnv/LoginServlet
 
 ## Servletの作成
 - [サーブレット作成](./2_Servlet.md)
+- [jspファイル作成](./3_jsp_create.md)
+
+## データベース作成
+- [MySqlでのdb作成](./4_mySql.md)
+
+## 参考
+[Javaで作成するWebアプリケーション](https://skill-for-it.com/java_webapp_2/)
