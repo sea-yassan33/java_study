@@ -47,6 +47,8 @@ use [データベース名]
 ```
 create table if not exists admin_tb (admin_id int(11) not null auto_increment, name varchar(20) not null, password varchar(20) not null, primary key (admin_id));
 
+create table customer_tb (customer_id int(11) not null auto_increment,admin_id int(11) not null,name varchar(20) not null,address varchar(20), registered_time datetime DEFAULT CURRENT_TIMESTAMP,updated_time datetime DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,primary key (customer_id),foreign key (admin_id)references admin_tb(admin_id) on delete cascade on update cascade)ENGINE=InnoDB  DEFAULT CHARSET=utf8;
+
 create table if not exists [テーブル名]()
 
 if not exists はすでに同じ名前のテーブルが存在している場合はテーブルの作成を行わないようにする

@@ -1,22 +1,43 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ page import="java.util.*" %>
+<%@ page import="dto.Customer" %>
+<% List<Customer> customer_list = (List<Customer>)request.getAttribute("customer"); %>
+
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<!-- bootstrap -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.min.css" integrity="sha384-fFxL8wXRpg9gVqGpY+URMtLr3fLL0WBbo4NBQ+IWwMDYjIjI5VQ46XlJm5+BUlXJ" crossorigin="anonymous">
+
+<%@include file= "head.jsp" %>
 <title>顧客一覧画面</title>
 </head>
 <body>
-	<h1>ログイン成功</h1>
+	<div class="mx-auto text-center" style="width: 70%;">
+		<h2 class="text-center mb-3">顧客一覧</h2>
+		<table class="table table-striped">
+			<thead>
+				<tr>
+					<th scope="col">顧客ID</th>
+					<th scope="col">お客様名</th>
+					<th scope="col">住所</th><th scope="col">登録日</th>
+					<th scope="col">更新日</th>
+				</tr>
+			</thead>
+			<tbody>
+			<% for(Customer cus : customer_list){ %>
+				<tr>
+					<td><%= cus.getCustomer_id() %></td>
+					<td><%= cus.getName() %></td>
+					<td><%= cus.getAddress() %></td>
+					<td><%= cus.getRegistered_time() %></td>
+					<td><%= cus.getUpdated_time() %></td>
+				</tr>
+			<% } %>
+			</tbody>
+		</table>
+		<a href="<%=request.getContextPath() %>/CustomerRegisterServlet">顧客登録画面へ</a>
+	</div>
 	
-	<!-- jQuery読み込み -->
-	<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-	<!-- Propper.js読み込み -->
-	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-	<!-- BootstrapのJavascript読み込み -->
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+<%@include file= "foot.jsp" %>
 </body>
 </html>
