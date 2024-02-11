@@ -9,6 +9,12 @@
 - [基本設定](./Documet/04_eclipse_assist.md)
   - 補完の方法
 
+#### ローカルURL
+```
+http://localhost:8080/
+http://localhost:8080/SampleEnv/LoginServlet
+http://localhost:8080/SampleEnv/JavaScriptTest
+```
 
 ## Java
 - [サーブレットJavaプロジェクトについて](./Documet/servretJava/1_servretProject.md)
